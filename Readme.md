@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Андрей Журавский](https://up.htmlacademy.ru/adaptive/9/user/210151).
-* Наставник: `Неизвестно`.
+* Наставник: [Никита Рогатнев](https://up.htmlacademy.ru/adaptive/9/user/86119).
 
 ---
 
