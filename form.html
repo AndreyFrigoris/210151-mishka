@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+  <title>HTML Academy: Мишка</title>
+  </head>
+  <body>
+
+    <header class="page-header">
+      <div class="page-header__logo">
+        <a><img src="#" width="86" height="35" alt="Mishka"></a>
+      </div>
+      <nav class="main-nav  main-nav--closed  main-nav--nojs">
+        <span class="main-nav__toggle" type="button">Открыть меню</span>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__items">
+            <li class="main-nav__item"><a><img="#" width="86" height="35" alt="Mishka"></a></li>
+            <li class="main-nav__item"><a href="">Каталог товаров</a></li>
+            <li class="main-nav__item"><a href="">Вязание на заказ</a></li>
+            <li class="main-nav__item"><a class="main-nav__search" href="#">Поиск по сайту</a></li>
+            <li class="main-nav__item"><a class="main-nav__basket" href="#">Корзина: пока пуста</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main class="page-main">
+
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <p class="page-footer__social">
+          <span class="social">
+            <a class="social__item  social__item--in" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
+            <a class="social__item  social__item--fb" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
+            <a class="social__item  social__item--tw" href="https://twitter.com/htmlacademy_ru">Мы в Твиттере</a>
+          </span>
+        </p>
+        <p class="page-footer__copyright">
+          <span>Разработано</span>
+          <a class="page-footer__copyright-link" href="https://htmlacademy.ru">HTML Academy</a>
+        </p>
+      </div>
+    </footer>
+
+    <section class="modal">
+      <form class="modal__form" action="#" method="post">
+        <h2 class="modal__title">Добавить в корзину</h2>
+        <span class="modal__size">Выберите размер:</span>
+        <input class="modal__item" type="radio" id="size-s" name="size" value="size-s" checked>
+        <label class="modal__item-label" for="size-s">S</label>
+        <input class="modal__item" type="radio" id="size-m" name="size" value="size-m">
+        <label class="modal__item-label" for="size-m">M</label>
+        <input class="modal__item" type="radio" id="size-l" name="size" value="size-l">
+        <label class="modal__item-label" for="size-l">L</label>
+        <input class="modal__submit" type="submit" name="submit" value="Добавить">
+      </form>
+    </section>
+
+  </body>
+</html>
