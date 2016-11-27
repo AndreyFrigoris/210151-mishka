@@ -8,19 +8,16 @@
 
     <header class="page-header">
       <div class="page-header__logo">
-        <a><img src="#" width="86" height="35" alt="Mishka"></a>
+        <a href="index.html"><img src="#" width="86" height="35" alt="Mishka"></a>
       </div>
+      <span class="main-nav__toggle">Открыть меню</span>
       <nav class="main-nav  main-nav--closed  main-nav--nojs">
-        <span class="main-nav__toggle">Открыть меню</span>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__items">
-            <li class="main-nav__item  main-nav__item--active"><a><img src="#" width="86" height="35" alt="Mishka"></a></li>
-            <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
-            <li class="main-nav__item"><a href="form.html">Вязание на заказ</a></li>
-            <li class="main-nav__item"><a class="main-nav__search" href="#">Поиск по сайту</a></li>
-            <li class="main-nav__item"><a class="main-nav__basket" href="#">Корзина: пока пуста</a></li>
-          </ul>
-        </div>
+        <ul class="main-nav__items">
+          <li class="main-nav__item  main-nav__item--active"><a href="catalog.html">Каталог товаров</a></li>
+          <li class="main-nav__item"><a href="form.html">Вязание на заказ</a></li>
+          <li class="main-nav__item  main-nav__item--search"><a href="#">Поиск по сайту</a></li>
+          <li class="main-nav__item  main-nav__item--basket"><a href="#">Корзина: пока пуста</a></li>
+        </ul>
       </nav>
     </header>
 
@@ -38,10 +35,10 @@
           </div>
         </div>
       </section>
-      <section class="weekly">
+      <article class="weekly">
         <div class="weekly__wrapper">
-          <h2 class="weekly__title">Вязаные корзинки</h2>
-          <h3 class="weekly__subtitle">Товар недели</h3>
+          <h1 class="weekly__title">Вязаные корзинки</h1>
+          <span class="weekly__subtitle">Товар недели</span>
           <p class="weekly__info">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
           <table class="weekly__description">
             <tr>
@@ -61,28 +58,16 @@
           <span class="weekly__price">Цена: 990 руб.</span>
           <a class="weekly__btn  btn" href="#">Заказать</a>
         </div>
-      </section>
+      </article>
       <section class="features">
         <div class="features__wrapper">
           <h2 class="features__title">Коротко о нас:</h2>
-          <div class="features__item">
-            <p class="features__flower">Экологически чистые материалы</p>
-          </div>
-          <div class="features__item">
-            <p class="features__money">Скандинавский стиль по российской цене</p>
-          </div>
-          <div class="features__item">
-            <p class="features__heart">Увеличивает лайки на фотографиях</p>
-          </div>
-          <div class="features__item">
-            <p class="features__ball">Связано вручную с любовью и умилением</p>
-          </div>
-          <div class="features__item">
-            <p class="features__rocket">Поддержка отечественного производителя</p>
-          </div>
-          <div class="features__item">
-            <p class="features__gift">Поставляется в подарочной упаковке</p>
-          </div>
+          <span class="features__item  features__item--flower">Экологически чистые материалы</span>
+          <span class="features__item  features__item--money">Скандинавский стиль по российской цене</span>
+          <span class="features__item  features__item--heart">Увеличивает лайки на фотографиях</span>
+          <span class="features__item  features__item--ball">Связано вручную с любовью и умилением</span>
+          <span class="features__item  features__item--rocket">Поддержка отечественного производителя</span>
+          <span class="features__item  features__item--gift">Поставляется в подарочной упаковке</span>
         </div>
       </section>
       <section class="reviews">
@@ -142,12 +127,14 @@
       <form class="modal__form" action="#" method="post">
         <h2 class="modal__title">Добавить в корзину</h2>
         <span class="modal__size">Выберите размер:</span>
-        <input class="modal__item" type="radio" id="size-s" name="size" value="size-s" checked>
-        <label class="modal__item-label" for="size-s">S</label>
-        <input class="modal__item" type="radio" id="size-m" name="size" value="size-m">
-        <label class="modal__item-label" for="size-m">M</label>
-        <input class="modal__item" type="radio" id="size-l" name="size" value="size-l">
-        <label class="modal__item-label" for="size-l">L</label>
+        <fieldset class="modal__items">
+          <input class="modal__item" type="radio" id="size-s" name="size" value="size-s" checked>
+          <label class="modal__item-label" for="size-s">S</label>
+          <input class="modal__item" type="radio" id="size-m" name="size" value="size-m">
+          <label class="modal__item-label" for="size-m">M</label>
+          <input class="modal__item" type="radio" id="size-l" name="size" value="size-l">
+          <label class="modal__item-label" for="size-l">L</label>
+        </fieldset>
         <input class="modal__submit" type="submit" name="submit" value="Добавить">
       </form>
     </section>

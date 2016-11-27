@@ -8,19 +8,16 @@
 
     <header class="page-header">
       <div class="page-header__logo">
-        <a><img src="#" width="86" height="35" alt="Mishka"></a>
+        <a href="index.html"><img src="#" width="86" height="35" alt="Mishka"></a>
       </div>
+      <span class="main-nav__toggle">Открыть меню</span>
       <nav class="main-nav  main-nav--closed  main-nav--nojs">
-        <span class="main-nav__toggle">Открыть меню</span>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__items">
-            <li class="main-nav__item"><a><img src="#" width="86" height="35" alt="Mishka"></a></li>
-            <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
-            <li class="main-nav__item  main-nav__item--active"><a href="form.html">Вязание на заказ</a></li>
-            <li class="main-nav__item"><a class="main-nav__search" href="#">Поиск по сайту</a></li>
-            <li class="main-nav__item"><a class="main-nav__basket" href="#">Корзина: пока пуста</a></li>
-          </ul>
-        </div>
+        <ul class="main-nav__items">
+          <li class="main-nav__item  main-nav__item--active"><a href="catalog.html">Каталог товаров</a></li>
+          <li class="main-nav__item"><a href="form.html">Вязание на заказ</a></li>
+          <li class="main-nav__item  main-nav__item--search"><a href="#">Поиск по сайту</a></li>
+          <li class="main-nav__item  main-nav__item--basket"><a href="#">Корзина: пока пуста</a></li>
+        </ul>
       </nav>
     </header>
 
@@ -62,20 +59,20 @@
           </fieldset>
           <fieldset class="order-form__id">
             <legend class="order-form__title">ФИО</legend>
-            <label class="order-form__name-label" for="name">Имя:</label>
-            <input class="order-form__name" type="text" id="name" placeholder="Введите ваше имя*" required>
-            <label class="order-form__surname-label" for="surname">Имя:</label>
-            <input class="order-form__surname" type="text" id="surname" placeholder="Укажите фамилию*" required>
-            <label class="order-form__fathername-label" for="fathername">Имя:</label>
-            <input class="order-form__name" type="text" id="fathername" placeholder="Отчество, если желаете">
+            <label class="order-form__input-label" for="name">Имя:</label>
+            <input class="order-form__input" type="text" id="name" name="name" placeholder="Введите ваше имя*" required>
+            <label class="order-form__input-label" for="surname">Имя:</label>
+            <input class="order-form__input" type="text" id="surname" name="surname" placeholder="Укажите фамилию*" required>
+            <label class="order-form__input-label" for="fathername">Имя:</label>
+            <input class="order-form__input" type="text" id="fathername" name="fathername" placeholder="Отчество, если желаете">
           </fieldset>
           <fieldset class="order-form__phone">
             <legend class="order-form__title">ТЕЛ</legend>
-            <input class="order-form__phone-number" type="text" placeholder="+7 XXX XX XX*" required>
+            <input class="order-form__phone-number" type="text" name="tel" placeholder="+7 XXX XX XX*" required>
           </fieldset>
           <fieldset class="order-form__email">
             <legend class="order-form__title">E-MAIL</legend>
-            <input class="order-form__email-adress" type="text" placeholder="Ваш Email*" required>
+            <input class="order-form__email-adress" type="text" name="email" placeholder="Ваш Email*" required>
           </fieldset>
           <fieldset class="order-form__other">
             <legend class="order-form__title">ДОП</legend>
