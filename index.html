@@ -2,13 +2,14 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-  <title>HTML Academy: Мишка</title>
+    <title>HTML Academy: Мишка</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 
     <header class="page-header">
       <div class="page-header__logo">
-        <a href="index.html"><img src="#" width="86" height="35" alt="Mishka"></a>
+        <a href="index.html"><img src="img/logo-mobile.svg" width="86" height="35" alt="Mishka"></a>
       </div>
       <span class="main-nav__toggle">Открыть меню</span>
       <nav class="main-nav  main-nav--closed  main-nav--nojs">
@@ -54,7 +55,7 @@
               <td>15 см</td>
             </tr>
           </table>
-          <img class="weekly__image" src="#" width="260" height="315" alt="Вязаные корзинки">
+          <img class="weekly__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
           <span class="weekly__price">Цена: 990 руб.</span>
           <a class="weekly__btn  btn" href="#">Заказать</a>
         </div>
@@ -82,9 +83,9 @@
               </cite>
             </blockquote>
           </div>
-          <div class="review__btns">
-            <button class="reviews__prev" type="button">Предыдущий отзыв</button>
-            <button class="reviews__next" type="button">Следующий отзыв</button>
+          <div class="reviews__btns">
+            <button class="reviews__slider-btn  reviews__btn--prev" type="button">Предыдущий отзыв</button>
+            <button class="reviews__slider-btn  reviews__btn--next" type="button">Следующий отзыв</button>
           </div>
           <a class="reviews__btn  btn" href="#">Написать</a>
         </div>
@@ -95,7 +96,7 @@
           <table class="contacts__info">
             <tr>
               <td><span>e-mail:</span></td>
-              <td><a href="#">info@mimimishkashop.ru</a></td>
+              <td><a class="contacts__email" href="#">info@mimimishkashop.ru</a></td>
             </tr>
             <tr>
               <td><span>адрес:</span></td>
@@ -103,7 +104,7 @@
             </tr>
           </table>
           <div class="contacts__map">
-            <img src="#" width="320" height="457" alt="map">
+            <img src="img/map-mobile@1x.jpg" width="320" height="457" alt="map">
           </div>
           <a class="contacts__btn  btn" href="#">Напишите нам</a>
         </div>
@@ -112,19 +113,19 @@
 
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <p class="page-footer__social">
-          <span class="social">
-            <a class="social__item  social__item--in" href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a>
-            <a class="social__item  social__item--fb" href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a>
-            <a class="social__item  social__item--tw" href="https://twitter.com/htmlacademy_ru">Мы в Твиттере</a>
-          </span>
-        </p>
-        <p class="page-footer__copyright">
-          <span>Разработано</span>
-          <a class="page-footer__copyright-link" href="https://htmlacademy.ru">HTML Academy</a>
-        </p>
+        <div class="page-footer__social">
+          <ul class="social__items">
+            <li class="social__item  social__item--in"><a href="https://www.instagram.com/htmlacademy">Мы в Инстаграме</a></li>
+            <li class="social__item  social__item--fb"><a href="https://www.facebook.com/htmlacademy">Мы в Фейсбуке</a></li>
+            <li class="social__item  social__item--tw"><a href="https://twitter.com/htmlacademy_ru">Мы в Твиттере</a></li>
+          </ul>
+        </div>
+        <div class="page-footer__copyright">
+          <a class="page-footer__copyright-link" href="https://htmlacademy.ru"><span>Разработано</span></a>
+        </div>
       </div>
     </footer>
+
     <section class="modal">
       <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
         <h2 class="modal__title">Добавить в корзину</h2>
