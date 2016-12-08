@@ -47,7 +47,7 @@
   margin: 20px auto;
   color: @page-gray-color;
   font-size: 17px;
-  font-weight: 700;
+  font-weight: bold;
   text-align: center;
 }
 
@@ -61,8 +61,8 @@
     position: relative;
     & img {
       position: absolute;
-      top: 0;
-      left: 50%;
+      top: 106px;
+      right: 0;
     }
   }
 
@@ -87,10 +87,21 @@
     width: 40%;
     font-size: 17px;
     line-height: 30px;
+    margin-top: 44px;
+    margin-bottom: 34px;
   }
 
   .weekly__description {
     width: 40%;
+  }
+
+  .weekly__buy {
+    width: 40%;
+    margin-top: 50px;
+  }
+
+  .weekly__price {
+    font-size: 20px;
   }
 }
 
@@ -110,4 +121,16 @@
     margin-left: 34px;
     margin-top: 5px;
   }
+
+  .weekly__info-wrapper,
+  .weekly__buy {
+    margin-left: 175px;
+  }
+
+  .weekly__description,
+  .weekly__buy,
+  .weekly__info {
+    width: 30%;
+  }
+
 }
