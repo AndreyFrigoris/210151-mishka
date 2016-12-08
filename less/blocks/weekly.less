@@ -2,9 +2,16 @@
   width: 100%;
   padding: 30px;
 }
+
+.weekly__title-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .weekly__title {
   font-size: 25px;
   line-height: 30px;
+  font-weight: bold;
   margin-top: 0;
   margin-bottom: 4px;
 }
@@ -42,4 +49,65 @@
   font-size: 17px;
   font-weight: 700;
   text-align: center;
+}
+
+@media @tablet-widths {
+  .weekly {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .weekly__wrapper {
+    position: relative;
+    & img {
+      position: absolute;
+      top: 0;
+      left: 50%;
+    }
+  }
+
+  .weekly__title-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .weekly__title {
+    font-size: 43px;
+    line-height: 50px;
+    font-weight: bold;
+  }
+
+  .weekly__subtitle {
+    width: 100px;
+    padding-top: 12px;
+    text-align: center;
+  }
+
+  .weekly__info {
+    width: 40%;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .weekly__description {
+    width: 40%;
+  }
+}
+
+@media @desktop-widths {
+  .weekly__title-wrapper {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+
+  .weekly__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .weekly__subtitle {
+    margin-right: 39px;
+    margin-left: 34px;
+    margin-top: 5px;
+  }
 }

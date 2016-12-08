@@ -2,3 +2,41 @@
   width: 100%;
   background-color: @page-footer-color;
 }
+
+.page-footer__wrapper {
+  margin: auto;
+}
+
+.page-footer__social {
+  padding-top: 24px;
+  padding-bottom: 27px;
+}
+
+.social__items {
+  display: flex;
+  justify-content: center;
+}
+
+.social__item {
+  font-size: 0;
+  width: 29px;
+  height: 29px;
+  border: 1px solid @page-black-color;
+  &:nth-child(1),
+  &:nth-child(2) {
+    margin-right: 40px;
+  }
+}
+
+.page-footer__copyright {
+  padding-top: 27px;
+  padding-bottom: 31px;
+  text-align: center;
+}
+
+.page-footer__copyright-link {
+  font-size: 18px;
+  line-height: 19px;
+  font-weight: 700;
+  color: @page-black-color;
+}
