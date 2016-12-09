@@ -9,9 +9,44 @@
   padding-top: 13px;
 }
 
+.features__items {
+  display: flex;
+  flex-direction: column;
+}
+
 .features__item {
   display: inline-block;
   padding-top: 87px;
   font-size: 17px;
   font-weight: 700;
+}
+
+@media @tablet-widths {
+  .features__title {
+    font-size: 43px;
+    line-height: 50px;
+    font-weight: bold;
+  }
+
+  .features__items {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .features__item {
+    width: 50%;
+    font-size: 20px;
+  }
+}
+
+@media @desktop-widths {
+  .features__title {
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .features__wrapper {
+    padding-left: 17%;
+    padding-right: 17%;
+  }
 }
