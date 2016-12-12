@@ -1,5 +1,10 @@
 .features {
   width: 100%;
+}
+
+.features__wrapper {
+  width: 320px;
+  margin: 0 auto;
   padding: 30px;
 }
 
@@ -14,7 +19,6 @@
 }
 
 .features__item {
-  width: 70%;
   display: inline-block;
   padding-top: 87px;
   font-size: 17px;
@@ -22,6 +26,13 @@
 }
 
 @media @tablet-widths {
+  .features__wrapper {
+    width: 768px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 80px;
+  }
+
   .features__title {
     .title-tablet();
   }
@@ -36,16 +47,23 @@
 
   .features__item {
     font-size: 20px;
+    padding-right: 36px;
   }
 }
 
 @media @desktop-widths {
-  .features__title {
-    .title-desktop();
+  .features__wrapper {
+    width: 1150px;
+    padding-left: 225px;
+    padding-right: 225px;
   }
 
-  .features__wrapper {
-    padding-left: 17%;
-    padding-right: 17%;
+  .features__title {
+    .title-desktop();
+    margin-bottom: 0;
+  }
+
+  .features__item {
+    padding-top: 105px;
   }
 }

@@ -1,5 +1,10 @@
 .reviews {
   width: 100%;
+}
+
+.reviews__wrapper {
+  width: 320px;
+  margin: 0 auto;
   padding-left: 30px;
   padding-right: 30px;
 }
@@ -14,6 +19,7 @@
     color: @page-gray-color;
     font-size: 15px;
     line-height: 30px;
+    margin-bottom: 26px;
   }
 }
 
@@ -50,16 +56,14 @@
 }
 
 @media @tablet-widths {
-  .reviews {
-    padding-left: 30px;
-    padding-right: 30px;
+  .reviews__wrapper {
+    position: relative;
+    width: 768px;
+    padding-left: 50px;
+    padding-right: 50px;
     padding-top: 79px;
     padding-bottom: 50px;
     background: url("../img/review@1x.jpg") 0 50% no-repeat;
-  }
-
-  .reviews__wrapper {
-    position: relative;
   }
 
   .reviews__title {
@@ -69,15 +73,15 @@
 
   .reviews__btn {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 86px;
+    right: 50px;
     padding: 12px 40px 12px 46px;
   }
 
   .reviews__btns {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: 52px;
+    right: 50px;
   }
 
   .reviews__slider-btn {
@@ -91,9 +95,12 @@
 }
 
 @media @desktop-widths {
-  .reviews {
-    padding-left: 175px;
+  .reviews__wrapper {
+    width: 1150px;
+    padding-left: 225px;
     padding-bottom: 100px;
+    padding-right: 150px;
+    background-position: 50px 50%;
   }
 
   .reviews__title {
@@ -102,5 +109,13 @@
 
   .reviews__item p {
     margin-bottom: 40px;
+  }
+
+  .reviews__btn {
+    top: 90px;
+  }
+
+  .reviews__btns {
+    bottom: 100px;
   }
 }

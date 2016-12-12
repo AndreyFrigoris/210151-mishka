@@ -1,9 +1,14 @@
 .weekly {
   width: 100%;
+}
+
+.weekly__wrapper {
+  width: 320px;
+  margin: 0 auto;
   padding: 30px;
 }
 
-.weekly__title-wrapper {
+.weekly__header {
   display: flex;
   flex-direction: column;
 }
@@ -35,9 +40,13 @@
   font-size: 15px;
   line-height: 20px;
   & td {
-    padding: 10px 34px 10px 0;
+    padding: 10px 0;
     border-bottom: 1px solid @page-border-color;
   }
+}
+
+.weekly__col {
+  width: 99px;
 }
 
 .weekly__price {
@@ -50,21 +59,19 @@
 }
 
 @media @tablet-widths {
-  .weekly {
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-
   .weekly__wrapper {
     position: relative;
-    & img {
-      position: absolute;
-      top: 106px;
-      right: 0;
-    }
+    width: 768px;
+    padding: 50px;
   }
 
-  .weekly__title-wrapper {
+  .weekly__image {
+    position: absolute;
+    top: 156px;
+    right: 50px;
+  }
+
+  .weekly__header {
     flex-direction: row;
     justify-content: space-between;
   }
@@ -77,23 +84,25 @@
     width: 100px;
     padding-top: 12px;
     text-align: center;
+    margin-right: 10px;
   }
 
   .weekly__info {
-    width: 40%;
     font-size: 17px;
     line-height: 30px;
     margin-top: 44px;
     margin-bottom: 34px;
   }
 
-  .weekly__description {
-    width: 40%;
+  .weekly__info-wrapper {
+    width: 50%;
+    padding-right: 44px;
   }
 
   .weekly__buy {
-    width: 40%;
+    width: 50%;
     margin-top: 50px;
+    padding-right: 44px;
   }
 
   .weekly__price {
@@ -102,9 +111,23 @@
 }
 
 @media @desktop-widths {
-  .weekly__title-wrapper {
+  .weekly__wrapper {
+    width: 1150px;
+    margin-top: 80px;
+  }
+
+  .weekly__header {
     flex-direction: row-reverse;
     justify-content: flex-end;
+  }
+
+  .weekly__info-wrapper {
+    padding-left: 175px;
+  }
+
+  .weekly__buy {
+    padding-left: 175px;
+    margin-top: 110px;
   }
 
   .weekly__title {
@@ -117,15 +140,12 @@
     margin-top: 5px;
   }
 
-  .weekly__info-wrapper,
-  .weekly__buy {
-    margin-left: 175px;
+  .weekly__image {
+    top: 0;
+    z-index: -1;
   }
 
-  .weekly__description,
-  .weekly__buy,
-  .weekly__info {
-    width: 30%;
+  .weekly__price {
+    margin-bottom: 33px;
   }
-
 }
