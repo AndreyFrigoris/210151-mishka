@@ -1,10 +1,20 @@
 .weekly {
   width: 100%;
+}
+
+.weekly__wrapper {
+  width: 320px;
+  margin: 0 auto;
   padding: 30px;
 }
+
+.weekly__header {
+  display: flex;
+  flex-direction: column;
+}
+
 .weekly__title {
-  font-size: 25px;
-  line-height: 30px;
+  .title();
   margin-top: 0;
   margin-bottom: 4px;
 }
@@ -19,27 +29,123 @@
 
 .weekly__info {
   font-size: 15px;
-  color: #444444;
+  color: @page-gray-color;
 }
 
 .weekly__description {
   border-collapse: collapse;
   margin-bottom: 29px;
-  color: #444444;
+  color: @page-gray-color;
   text-align: left;
   font-size: 15px;
   line-height: 20px;
   & td {
-    padding: 10px 34px 10px 0;
-    border-bottom: 1px solid #ececec;
+    padding: 10px 0;
+    border-bottom: 1px solid @page-border-color;
   }
+}
+
+.weekly__col {
+  width: 99px;
 }
 
 .weekly__price {
   display: block;
   margin: 20px auto;
-  color: #444444;
+  color: @page-gray-color;
   font-size: 17px;
-  font-weight: 700;
+  font-weight: bold;
   text-align: center;
+}
+
+@media @tablet-widths {
+  .weekly__wrapper {
+    position: relative;
+    width: 768px;
+    padding: 50px;
+  }
+
+  .weekly__image {
+    position: absolute;
+    top: 156px;
+    right: 50px;
+  }
+
+  .weekly__header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .weekly__title {
+    .title-tablet();
+  }
+
+  .weekly__subtitle {
+    width: 100px;
+    padding-top: 12px;
+    text-align: center;
+    margin-right: 10px;
+  }
+
+  .weekly__info {
+    font-size: 17px;
+    line-height: 30px;
+    margin-top: 44px;
+    margin-bottom: 34px;
+  }
+
+  .weekly__info-wrapper {
+    width: 50%;
+    padding-right: 44px;
+  }
+
+  .weekly__buy {
+    width: 50%;
+    margin-top: 50px;
+    padding-right: 44px;
+  }
+
+  .weekly__price {
+    font-size: 20px;
+  }
+}
+
+@media @desktop-widths {
+  .weekly__wrapper {
+    width: 1150px;
+    margin-top: 80px;
+  }
+
+  .weekly__header {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+
+  .weekly__info-wrapper {
+    padding-left: 175px;
+  }
+
+  .weekly__buy {
+    padding-left: 175px;
+    margin-top: 110px;
+  }
+
+  .weekly__title {
+    .title-desktop();
+  }
+
+  .weekly__subtitle {
+    margin-right: 39px;
+    margin-left: 34px;
+    margin-top: 5px;
+  }
+
+  .weekly__image {
+    top: 0;
+    z-index: -1;
+  }
+
+  .weekly__price {
+    margin-bottom: 33px;
+  }
 }
