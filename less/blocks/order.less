@@ -1,9 +1,12 @@
+.order {
+  width: 100%;
+}
+
 .order__header {
   width: 100%;
-  background-color: @page-footer-color;
-  padding-top: 73px;
-  padding-bottom: 73px;
   text-align: center;
+  background-color: @page-footer-color;
+  padding: 71px 30px 75px 38px;
   border-top: 1px solid @page-border-color;
 }
 
@@ -17,7 +20,7 @@
 .order__subtitle {
   width: 320px;
   margin: 0 auto;
-  padding: 30px;
+  padding: 25px 30px 25px 30px;
   & p {
     margin: 0;
   }
@@ -26,6 +29,11 @@
 }
 
 @media @tablet-widths {
+  .order__header {
+    padding: 63px 188px 70px 190px;
+    border: none;
+  }
+
   .order__title {
     .title-tablet();
   }
@@ -41,6 +49,10 @@
 @media @desktop-widths {
   .order__title {
     .title-desktop();
+  }
+
+  .order__header {
+    padding: 102px 334px 94px 338px;
   }
 
   .order__subtitle {
