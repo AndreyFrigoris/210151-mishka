@@ -19,10 +19,38 @@
 }
 
 .features__item {
+  position: relative;
   display: inline-block;
   padding-top: 87px;
   font-size: 17px;
   font-weight: bold;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    top: 33px;
+    left: 0;
+    fill: @page-light-color;
+  }
+  &--flower::before {
+    content: url("../img/icon-feature-1.svg")
+  }
+  &--money::before {
+    content: url("../img/icon-feature-3.svg")
+  }
+  &--heart::before {
+    content: url("../img/icon-feature-5.svg")
+  }
+  &--ball::before {
+    content: url("../img/icon-feature-2.svg")
+  }
+  &--rocket::before {
+    content: url("../img/icon-feature-4.svg")
+  }
+  &--gift::before {
+    content: url("../img/icon-feature-6.svg")
+  }
 }
 
 @media @tablet-widths {

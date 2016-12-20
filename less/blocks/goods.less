@@ -13,6 +13,11 @@
   text-align: center;
 }
 
+@media (min-resolution: 144dpi),
+(min-resolution: 1.5dppx) {
+  background-image: url("../../img/hero-mobile@2x.jpg");
+}
+
 .goods__title {
   font-size: 27px;
   font-weight: bold;
@@ -31,15 +36,43 @@
   &--toys {
     background-color: @page-dark-color;
   }
-  & a {
-    color: @page-white-color;
-    display: block;
-    padding: 25px 75% 30px 29px;
-  }
   & h2 {
     font-size: 19px;
     margin: 0;
   }
+}
+
+.goods__link {
+  position: relative;
+  color: @page-white-color;
+  display: block;
+  padding: 25px 75% 30px 29px;
+  &:hover .goods__icon-interior {
+    fill: @page-interior-hover-color;
+  }
+  &:active .goods__icon-interior {
+    fill: @page-interior-active-color;
+  }
+  &:hover .goods__icon-toys {
+    fill: @page-toys-hover-color;
+  }
+  &:active .goods__icon-toys {
+    fill: @page-toys-active-color;
+  }
+}
+
+.goods__icon-interior {
+  position: absolute;
+  top: 22px;
+  right: 36px;
+  fill: @page-interior-color;
+}
+
+.goods__icon-toys {
+  position: absolute;
+  top: 20px;
+  right: 26px;
+  fill: @page-toys-color;
 }
 
 @media @tablet-widths {
@@ -52,6 +85,12 @@
   .goods__header {
     padding-top: 63px;
     padding-bottom: 343px;
+    background: url("../../img/hero-desktop@1x.jpg") no-repeat 50% 0;
+  }
+
+  @media (min-resolution: 144dpi),
+  (min-resolution: 1.5dppx) {
+    background-image: url("../../img/hero-desktop@2x.jpg");
   }
 
   .goods__title {
@@ -60,9 +99,6 @@
 
   .goods__items {
     flex-direction: row;
-    & a {
-      padding-left: 36px;
-    }
   }
 
   .goods__item {
@@ -70,6 +106,10 @@
     font-size: 20px;
     font-weight: 700;
     line-height: 30px;
+  }
+
+  .goods__link {
+    padding-left: 36px;
   }
 }
 
