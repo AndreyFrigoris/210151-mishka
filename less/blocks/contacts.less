@@ -1,5 +1,16 @@
 .contacts {
+  position: relative;
   width: 100%;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    height: 23px;
+    background: @page-white-color url("../img/bg-zigzag-line.svg") repeat-x;
+    background-size: 100%;
+  }
 }
 
 .contacts__wrapper {

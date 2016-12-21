@@ -1,5 +1,16 @@
 .features {
+  position: relative;
   width: 100%;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: @page-white-color url("../img/bg-zigzag-line.svg") repeat-x;
+    background-size: 100%;
+  }
 }
 
 .features__wrapper {

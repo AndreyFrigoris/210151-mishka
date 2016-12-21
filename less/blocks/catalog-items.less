@@ -23,6 +23,19 @@
 }
 
 @media @tablet-widths {
+  .catalog-items {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 330px;
+      left: 0;
+      width: 100%;
+      height: 30px;
+      background: url("../img/bg-zigzag-fill.svg") repeat-x;
+      background-size: 100%;
+    }
+  }
+
   .catalog-items__wrapper {
     padding-left: 50px;
     padding-right: 50px;
@@ -39,6 +52,12 @@
 }
 
 @media @desktop-widths {
+  .catalog-items {
+    &::after {
+      top: 345px;
+    }
+  }
+
   .catalog-items__wrapper {
     flex-direction: row;
     justify-content: space-between;

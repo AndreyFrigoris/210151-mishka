@@ -1,4 +1,5 @@
 .goods {
+  position: relative;
   width: 100%;
 }
 
@@ -76,6 +77,18 @@
 }
 
 @media @tablet-widths {
+  .goods {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: 0;
+      width: 100%;
+      height: 30px;
+      background: url("../img/bg-zigzag-fill.svg") repeat-x;
+      background-size: 100%;
+    }
+  }
   .goods__wrapper {
     width: 768px;
     padding-left: 50px;

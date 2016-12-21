@@ -145,6 +145,7 @@
 }
 
 .order-form__phone-wrapper {
+  position: relative;
   width: 320px;
   margin: 0 auto;
   padding-left: 30px;
@@ -152,6 +153,13 @@
   padding-top: 10px;
   display: flex;
   flex-direction: column;
+}
+
+.order-form__icon-phone {
+  position: absolute;
+  top: 42px;
+  right: 35px;
+  fill: @page-form-icon;
 }
 
 .order-form__phone-number {
@@ -162,6 +170,7 @@
 }
 
 .order-form__email-wrapper {
+  position: relative;
   width: 320px;
   margin: 0 auto;
   padding-left: 30px;
@@ -169,6 +178,13 @@
   padding-top: 10px;
   display: flex;
   flex-direction: column;
+}
+
+.order-form__icon-mail {
+  position: absolute;
+  top: 42px;
+  right: 35px;
+  fill: @page-form-icon;
 }
 
 .order-form__email-adress {
@@ -343,8 +359,18 @@
     padding-bottom: 8px;
   }
 
+  .order-form__icon-phone {
+    top: 67px;
+    right: 75px;
+  }
+
   .order-form__email-wrapper {
     padding-bottom: 30px;
+  }
+
+  .order-form__icon-mail {
+    top: 7px;
+    right: 70px;
   }
 
   .order-form__phone-number,
@@ -411,9 +437,19 @@
     padding-right: 225px;
   }
 
+  .order-form__icon-phone {
+    top: 67px;
+    right: 232px;
+  }
+
   .order-form__email-wrapper {
     width: 1150px;
     padding-right: 225px;
+  }
+
+  .order-form__icon-mail {
+    top: 8px;
+    right: 228px;
   }
 
   .order-form__other-wrapper {
