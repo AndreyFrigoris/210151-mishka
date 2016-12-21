@@ -27,6 +27,7 @@
 }
 
 .catalog-item__buy {
+  position: relative;
   padding: 25px 0 0 0;
   border-top: 1px solid @page-border-color;
   font-size: 15px;
@@ -38,6 +39,13 @@
   display: block;
   line-height: 0;
   font-size: 0;
+}
+
+.catalog-item__basket {
+  position: absolute;
+  top: 24px;
+  right: 0;
+  fill: @icon-menu-color;
 }
 
 @media @tablet-widths {
