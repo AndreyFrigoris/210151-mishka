@@ -10,8 +10,11 @@
 }
 
 .page-header__logo {
+  position: relative;
+  z-index: 6;
   display: flex;
   justify-content: center;
+  background-color: @page-white-color;
   & a {
     display: block;
     padding-top: 22px;
@@ -19,42 +22,91 @@
   }
 }
 
+.page-header__logo-mobile,
+.main-nav__logo {
+  &:hover {
+    fill: @page-arrow-hover-color;
+  }
+  &:active {
+    fill: @page-arrow-active-color;
+  }
+}
+
 .page-header__toggle-wrapper {
-  cursor: pointer;
-  position: absolute;
-  z-index: 10;
-  top: 0;
-  right: 0;
-  width: 80px;
-  height: 100%;
+
   font-size: 0;
   line-height: 0;
 }
 
-.page-header__toggle {
-  display: block;
-  position: relative;
-  z-index: 20;
-  top: 38px;
-  left: 40px;
-  width: 20px;
-  height: 2px;
-  background-color: @page-black-color;
-  &::before {
-    content: "";
+@media @mobile-widths-only {
+
+  .page-header__toggle-wrapper {
+    cursor: pointer;
     position: absolute;
-    top: 6px;
-    width: 20px;
-    height: 2px;
-    background-color: @page-black-color;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 100%;
   }
-  &::after {
-    content: "";
-    position: absolute;
-    top: -6px;
+
+  .page-header__toggle {
+    display: block;
+    position: relative;
+    z-index: 20;
+    top: 38px;
+    left: 40px;
     width: 20px;
     height: 2px;
-    background-color: @page-black-color;
+    background-color: @page-burger-color;
+    &--closed::before {
+      content: "";
+      position: absolute;
+      top: 6px;
+      width: 20px;
+      height: 2px;
+      background-color: @page-burger-color;
+    }
+    &--closed::after {
+      content: "";
+      position: absolute;
+      top: -6px;
+      width: 20px;
+      height: 2px;
+      background-color: @page-burger-color;
+    }
+    &--closed {
+      width: 20px;
+      height: 2px;
+      background-color: @page-burger-color;
+    }
+    &--opened {
+      background-color: inherit;
+    }
+    &--opened::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -4px;
+      width: 28px;
+      height: 2px;
+      background-color: @page-burger-color;
+      transform: rotate(45deg);
+    }
+    &--opened::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -4px;
+      width: 28px;
+      height: 2px;
+      background-color: @page-burger-color;
+      transform: rotate(-45deg);
+    }
+  }
+
+  .page-header__toggle--nojs {
+    display: none;
   }
 }
 

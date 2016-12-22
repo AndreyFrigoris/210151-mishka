@@ -41,6 +41,10 @@
     font-size: 19px;
     margin: 0;
   }
+  &:hover {
+    transform: translateY(-5px);
+  }
+  
 }
 
 .goods__link {
@@ -48,6 +52,9 @@
   color: @page-white-color;
   display: block;
   padding: 25px 75% 30px 29px;
+  &:active {
+    color: @goods-text-active-color;
+  }
   &:hover .goods__icon-interior {
     fill: @page-interior-hover-color;
   }
@@ -123,6 +130,16 @@
 
   .goods__link {
     padding-left: 36px;
+  }
+
+  .goods__icon-interior {
+    top: 29px;
+    right: 36px;
+  }
+
+  .goods__icon-toys {
+    top: 27px;
+    right: 26px;
   }
 }
 

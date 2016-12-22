@@ -68,14 +68,33 @@
 }
 
 .contacts__email {
+  position: relative;
   color: @page-gray-color;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: @page-form-color;
+  }
 }
 
 @media @tablet-widths {
   .contacts__wrapper {
+    position: relative;
     width: 768px;
     padding-left: 50px;
     padding-right: 50px;
+    &::before {
+      content: url("../img/icon-flag.svg");
+      position: absolute;
+      top: 50px;
+      right: 52px;
+      width: 47px;
+      height: 82px;
+    }
   }
 
   .contacts__map {
@@ -128,6 +147,10 @@
     padding-left: 225px;
     padding-top: 80px;
     margin-top: 50px;
+    &::before {
+      top: 118px;
+      left: 112px;
+    }
   }
 
   .contacts__title {

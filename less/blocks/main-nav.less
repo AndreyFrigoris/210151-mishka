@@ -2,7 +2,7 @@
   display: none;
   position: absolute;
   z-index: 5;
-  top: 79px;
+  top: 83px;
   left: 50%;
   margin-left: -160px;
   width: 320px;
@@ -33,6 +33,18 @@
   padding: 27px 0 29px 76px;
   color: @page-black-color;
   cursor: pointer;
+  &:hover {
+    color: @text-menu-hover-color;
+  }
+  &:active {
+    color: @text-menu-active-color;
+  }
+  &:hover .main-nav__item-icon {
+    fill: @page-light-color;
+  }
+  &:active .main-nav__item-icon {
+    fill: @icon-menu-active-color;
+  }
 }
 
 .main-nav__item-icon {
@@ -40,6 +52,35 @@
   top: 30px;
   left: 30px;
   fill: @icon-menu-color;
+}
+
+@media @mobile-widths-only {
+
+  @keyframes open {
+    0% {
+        transform: translateY(-320px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+  }
+
+  .main-nav {
+    &--closed {
+      display: none;
+    }
+    &--opened {
+      display: block;
+      animation: open 0.2s;
+    }
+    &--nojs {
+      display: block;
+      position: static;
+      margin: 0;
+      border-top: 1px solid @page-border-color;
+      transform: translateY(0);
+    }
+  }
 }
 
 @media @tablet-widths {
