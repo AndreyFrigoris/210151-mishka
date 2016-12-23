@@ -21,6 +21,8 @@
 
 .features__title {
   .title();
+  margin-top: 8px;
+  margin-bottom: 6px;
 }
 
 .features__items {
@@ -32,35 +34,46 @@
 .features__item {
   position: relative;
   display: inline-block;
-  padding-top: 87px;
+  padding-top: 82px;
   font-size: 17px;
+  line-height: 1.15em;
   font-weight: bold;
   &::before {
     content: '';
     position: absolute;
     width: 60px;
     height: 40px;
-    top: 33px;
-    left: 0;
     fill: @page-light-color;
   }
   &--flower::before {
-    content: url("../img/icon-feature-1.svg")
+    content: url("../img/icon-feature-1.svg");
+    top: 27px;
+    left: 9px;
   }
   &--money::before {
-    content: url("../img/icon-feature-3.svg")
+    content: url("../img/icon-feature-3.svg");
+    top: 28px;
+    left: 1px;
   }
   &--heart::before {
-    content: url("../img/icon-feature-5.svg")
+    content: url("../img/icon-feature-5.svg");
+    top: 33px;
+    left: 8px;
   }
   &--ball::before {
-    content: url("../img/icon-feature-2.svg")
+    content: url("../img/icon-feature-2.svg");
+    top: 29px;
+    left: 4px;
   }
   &--rocket::before {
-    content: url("../img/icon-feature-4.svg")
+    content: url("../img/icon-feature-4.svg");
+    top: 31px;
+    left: -4px;
   }
   &--gift::before {
-    content: url("../img/icon-feature-6.svg")
+    content: url("../img/icon-feature-6.svg");
+    top: 28px;
+    left: 5px;
   }
 }
 
