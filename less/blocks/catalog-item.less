@@ -1,6 +1,12 @@
 .catalog-item {
   display: flex;
   flex-direction: column;
+  &:hover {
+   box-shadow: 0 5px 5px @page-border-color;
+  }
+  &:active {
+    box-shadow: 0 3px 4px @page-border-color;
+  }
 }
 
 .catalog-item__description {
@@ -33,6 +39,18 @@
   font-size: 15px;
   font-weight: bold;
   margin-top: 18px;
+  &:hover {
+    color: @text-menu-hover-color;
+  }
+  &:active {
+    color: @text-menu-active-color;
+  }
+  &:hover .catalog-item__basket {
+    fill: @page-light-color;
+  }
+  &:active .catalog-item__basket {
+    fill: @icon-menu-active-color;
+  }
 }
 
 .catalog-item__image {

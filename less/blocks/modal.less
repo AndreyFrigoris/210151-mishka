@@ -50,6 +50,13 @@
   font-weight: bold;
   font-size: 17px;
   line-height: 16px;
+  cursor: pointer;
+  &:hover {
+    border-color: @page-modal-color;
+  }
+  &:active {
+    border-color: @page-form-color;
+  }
 }
 
 .modal__submit {
@@ -64,6 +71,7 @@
   font-weight: bold;
   line-height: 16px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 @media @tablet-widths {

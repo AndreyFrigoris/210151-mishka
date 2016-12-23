@@ -70,6 +70,12 @@
 .contacts__email {
   position: relative;
   color: @page-gray-color;
+  &:hover {
+    color: @page-icon-hover-color;
+  }
+  &:active {
+    color: @contacts-email-active-color;
+  }
   &::after {
     content: "";
     position: absolute;
@@ -78,6 +84,12 @@
     width: 100%;
     height: 1px;
     background-color: @page-form-color;
+  }
+  &:hover::after {
+    background-color: @page-icon-hover-color;
+  }
+  &:active::after {
+    background-color: @contacts-after-active-color;
   }
 }
 

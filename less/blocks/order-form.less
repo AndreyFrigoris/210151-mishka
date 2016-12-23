@@ -63,6 +63,12 @@
     background-color: @page-form-color;
     border-radius: 50%;
   }
+  &:hover::before {
+    border-color: @page-light-color;
+  }
+  &:active::before {
+    border-color: @text-menu-active-color;
+  }
 }
 
 .order-form__radio {
@@ -112,6 +118,12 @@
     border-right: none;
     transform: rotate(-45deg);
   }
+  &:hover::before {
+    border-color: @page-light-color;
+  }
+  &:active::before {
+    border-color: @text-menu-active-color;
+  }
 }
 
 .order-form__checkbox {
@@ -136,6 +148,13 @@
   border-bottom: 2px solid @page-black-color;
   padding: 16px 0;
   margin-bottom: 22px;
+  &:hover {
+    border-color: @page-form-color;
+  }
+  &:focus {
+    border-color: @page-form-color;
+    color: @page-gray-color;
+  }
 }
 
 .order-form__input-label {
@@ -167,6 +186,19 @@
   border-bottom: 2px solid @page-black-color;
   padding-bottom: 17px;
   margin-bottom: 20px;
+  &:hover {
+    border-color: @page-form-color;
+  }
+  &:focus {
+    border-color: @page-form-color;
+    color: @page-gray-color;
+  }
+  &:hover + .order-form__icon-phone {
+    fill: @page-form-color;
+  }
+  &:focus + .order-form__icon-phone {
+    fill: @page-form-color;
+  }
 }
 
 .order-form__email-wrapper {
@@ -192,6 +224,19 @@
   border-bottom: 2px solid @page-black-color;
   padding-bottom: 14px;
   margin-bottom: 20px;
+  &:hover {
+    border-color: @page-form-color;
+  }
+  &:focus {
+    border-color: @page-form-color;
+    color: @page-gray-color;
+  }
+  &:hover + .order-form__icon-mail {
+    fill: @page-form-color;
+  }
+  &:focus + .order-form__icon-mail {
+    fill: @page-form-color;
+  }
 }
 
 .order-form__other-wrapper {
@@ -214,6 +259,13 @@
 .order-form__wish {
   padding: 15px;
   border: 2px solid @page-gray-color;
+  &:hover {
+    border-color: @page-form-color;
+  }
+  &:focus {
+    border-color: @page-form-color;
+    color: @page-gray-color;
+  }
 }
 
 .order-form__submit-wrapper {
