@@ -155,12 +155,12 @@
           </a>
         </div>
         <div class="page-header__toggle-wrapper">
-          <span class="page-header__toggle">Открыть меню</span>
+          <span class="page-header__toggle  page-header__toggle--nojs  page-header__toggle--closed">Открыть меню</span>
         </div>
         <nav class="main-nav  main-nav--closed  main-nav--nojs">
           <ul class="main-nav__items">
             <li class="main-nav__item  main-nav__item--logo">
-              <a class="main-nav__item-link" href="index.html">
+              <a class="main-nav__item-link">
                 <svg class="main-nav__logo  main-nav__logo--tablet" width="113" height="47">
                   <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-tablet"/>
                 </svg>
@@ -189,7 +189,7 @@
       </div>
     </header>
 
-    <main class="page-main">
+    <main>
       <section class="catalog-items">
         <div class="catalog-items__header">
           <h1 class="catalog-items__title">Каталог товаров</h1>
@@ -280,7 +280,7 @@
           </div>
           <div class="made__info">
             <p>По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-            <a class="made__btn  btn" href="#">Сделать заказ</a>
+            <a class="made__btn  btn" href="form.html">Сделать заказ</a>
           </div>
         </div>
       </section>
@@ -340,6 +340,8 @@
         <input class="modal__submit" type="submit" name="submit" value="Добавить">
       </form>
     </section>
+    <div class="overlay"></div>
 
+    <script src="js/script.js"></script>
   </body>
 </html>
