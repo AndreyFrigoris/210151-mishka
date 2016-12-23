@@ -31,18 +31,39 @@
 }
 
 .goods__item {
+  position: relative;
   &--interior {
     background-color: @page-light-color;
   }
   &--toys {
     background-color: @page-dark-color;
   }
+  &--interior:hover {
+    background-color: @goods-interior-hover-color;
+  }
+  &--toys:hover {
+    background-color: @page-icon-hover-color;
+  }
   & h2 {
     font-size: 19px;
     margin: 0;
   }
-  &:hover {
-    transform: translateY(-5px);
+  &::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 5px;
+  }
+  &--interior:hover::before {
+    display: block;
+    background-color: @goods-interior-hover-color;
+  }
+  &--toys:hover::before {
+    display: block;
+    background-color: @page-icon-hover-color;
   }
 }
 
@@ -51,20 +72,28 @@
   color: @page-white-color;
   display: block;
   padding: 25px 75% 30px 29px;
+  &:hover {
+    padding-top: 20px;
+    padding-bottom: 35px;
+  }
   &:active {
     color: @goods-text-active-color;
   }
   &:hover .goods__icon-interior {
     fill: @page-interior-hover-color;
+    top: 17px;
   }
   &:active .goods__icon-interior {
     fill: @page-interior-active-color;
+    top: 17px;
   }
   &:hover .goods__icon-toys {
     fill: @page-toys-hover-color;
+    top: 15px;
   }
   &:active .goods__icon-toys {
     fill: @page-toys-active-color;
+    top: 15px;
   }
 }
 
