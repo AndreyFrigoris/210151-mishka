@@ -111,7 +111,22 @@
 
 @media @tablet-widths {
   .page-header {
+    position: relative;
     border-bottom: none;
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 87px;
+      left: 0;
+      width: 100%;
+      height: 180px;
+      background-color: @page-footer-color;
+      border-top: 1px solid @page-border-color;
+    }
+    &--paint::before {
+      background-color: @top-bg-color;
+    }
   }
 
   .page-header__logo {

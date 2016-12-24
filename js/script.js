@@ -42,3 +42,17 @@ if(link.length > 0) {
     overlay.classList.remove('overlay--show');
   })
 }
+
+function initMap() {
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 16,
+    center: {lat: 59.936705, lng: 30.321744}
+  });
+
+  var image = 'img/icon-map-pin.svg';
+  var beachMarker = new google.maps.Marker({
+    position: {lat: 59.936259, lng: 30.321744},
+    map: map,
+    icon: image
+  });
+}

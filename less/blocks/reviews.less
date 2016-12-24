@@ -70,11 +70,9 @@
   .reviews__wrapper {
     position: relative;
     width: 768px;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 79px;
-    padding-bottom: 50px;
-    background: url("../img/review@1x.jpg") 0 50% no-repeat;
+    padding: 80px 50px 50px 50px;
+    margin-bottom: 60px;
+    background: @page-white-color url("../img/review@1x.jpg") 0 50% no-repeat;
   }
 
   @media (min-resolution: 144dpi),
@@ -86,20 +84,20 @@
 
   .reviews__title {
     .title-tablet();
-    margin: 0 0 50px 0;
+    margin: 0 0 49px 0;
   }
 
   .reviews__btn {
     position: absolute;
-    top: 86px;
+    top: 82px;
     right: 50px;
-    padding: 12px 40px 12px 46px;
+    padding: 16px 38px;
   }
 
   .reviews__btns {
     position: absolute;
-    bottom: 52px;
-    right: 50px;
+    bottom: 54px;
+    right: 51px;
   }
 
   .reviews__slider-btn {
@@ -109,32 +107,31 @@
 
   .reviews__item p {
     font-size: 17px;
-    margin-bottom: 50px;
+    margin-bottom: 58px;
   }
 }
 
 @media @desktop-widths {
   .reviews__wrapper {
     width: 1150px;
-    padding-left: 225px;
-    padding-bottom: 100px;
-    padding-right: 150px;
+    padding: 74px 150px 100px 225px;
     background-position: 50px 50%;
   }
 
   .reviews__title {
     .title-desktop();
+    margin-bottom: 48px;
   }
 
   .reviews__item p {
-    margin-bottom: 40px;
+    margin-bottom: 38px;
   }
 
   .reviews__btn {
-    top: 90px;
+    top: 82px;
   }
 
   .reviews__btns {
-    bottom: 100px;
+    bottom: 103px;
   }
 }
