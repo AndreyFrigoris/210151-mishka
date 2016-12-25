@@ -1,23 +1,38 @@
 .catalog-item {
   display: flex;
   flex-direction: column;
+  margin-bottom: 29px;
+  &:hover {
+    box-shadow: 0 5px 5px @page-border-color;
+  }
+  &:active {
+    box-shadow: 0 3px 4px @page-border-color;
+  }
 }
 
 .catalog-item__description {
   width: 260px;
-  padding: 28px;
+  padding: 27px 28px 28px 28px;
   border: 1px solid @catalog-border-color;
-  margin-bottom: 30px;
 }
 
 .catalog-item__title {
-  margin: 0 0 8px 0;
+  margin: 0 0 4px 0;
   font-size: 17px;
   font-weight: bold;
   & a{
     color: @page-black-color;
   }
+  &:hover a {
+    color: @text-menu-hover-color;
+  }
+  &:active a {
+    color: @text-menu-active-color;
+  }
+}
 
+.catalog-item__info-wrapper {
+  margin-bottom: 18px;
 }
 
 .catalog-item__info {
@@ -27,11 +42,17 @@
 }
 
 .catalog-item__buy {
-  padding: 25px 0 0 0;
+  position: relative;
+  padding: 22px 0 0 0;
   border-top: 1px solid @page-border-color;
   font-size: 15px;
   font-weight: bold;
-  margin-top: 18px;
+  &:hover .catalog-item__basket {
+    fill: @page-light-color;
+  }
+  &:active .catalog-item__basket {
+    fill: @icon-menu-active-color;
+  }
 }
 
 .catalog-item__image {
@@ -40,11 +61,17 @@
   font-size: 0;
 }
 
+.catalog-item__basket {
+  position: absolute;
+  top: 26px;
+  right: -3px;
+  fill: @icon-menu-color;
+}
+
 @media @tablet-widths {
   .catalog-item {
     width: 100%;
     flex-direction: row;
-    border: 1px solid @catalog-border-color;
     margin-bottom: 54px;
   }
 
@@ -59,12 +86,15 @@
     flex-direction: column;
     justify-content: space-between;
     margin: 0;
-    padding-right: 20px;
+    padding-right: 30px;
+    border: 1px solid @catalog-border-color;
+    padding-bottom: 24px;
   }
 
   .catalog-item__title {
     font-size: 20px;
     font-weight: bold;
+    margin-bottom: 5px;
   }
 
   .catalog-item__info {
@@ -73,12 +103,18 @@
 
   .catalog-item__buy {
     font-size: 17px;
+    padding-left: 4px;
+  }
+
+  .catalog-item__basket {
+    top: 21px;
+    right: 0;
   }
 }
 
 @media @desktop-widths {
   .catalog-item {
-    width: 30%;
+    width: 316px;
     flex-direction: column;
     justify-content: space-between;
   }
@@ -86,5 +122,11 @@
   .catalog-item__description {
     width: 100%;
     flex-grow: 3;
+    padding-left: 25px;
+  }
+
+  .catalog-item__buy {
+    padding-top: 19px;
+    padding-left: 0px;
   }
 }

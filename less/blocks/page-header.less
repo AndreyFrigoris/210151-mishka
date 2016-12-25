@@ -1,17 +1,34 @@
 .page-header {
   width: 100%;
+  border-bottom: 1px solid @page-border-color;
+}
+
+.page-header__wrapper {
   position: relative;
+  width: 320px;
+  margin: 0 auto;
 }
 
 .page-header__logo {
+  position: relative;
+  z-index: 6;
   display: flex;
   justify-content: center;
-  width: 320px;
-  margin: 0 auto;
+  background-color: @page-white-color;
   & a {
     display: block;
     padding-top: 22px;
-    padding-bottom: 20px;
+    padding-bottom: 16px;
+  }
+}
+
+.page-header__logo-mobile,
+.main-nav__logo {
+  &:hover {
+    fill: @page-arrow-hover-color;
+  }
+  &:active {
+    fill: @page-arrow-active-color;
   }
 }
 
@@ -20,8 +37,113 @@
   line-height: 0;
 }
 
+@media @mobile-widths-only {
+
+  .page-header__toggle-wrapper {
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 100%;
+  }
+
+  .page-header__toggle {
+    display: block;
+    position: relative;
+    z-index: 20;
+    top: 38px;
+    left: 30px;
+    width: 20px;
+    height: 2px;
+    background-color: @page-burger-color;
+    &--closed::before {
+      content: "";
+      position: absolute;
+      top: 6px;
+      width: 20px;
+      height: 2px;
+      background-color: @page-burger-color;
+    }
+    &--closed::after {
+      content: "";
+      position: absolute;
+      top: -6px;
+      width: 20px;
+      height: 2px;
+      background-color: @page-burger-color;
+    }
+    &--closed {
+      width: 20px;
+      height: 2px;
+      background-color: @page-burger-color;
+    }
+    &--opened {
+      background-color: inherit;
+    }
+    &--opened::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -4px;
+      width: 28px;
+      height: 2px;
+      background-color: @page-burger-color;
+      transform: rotate(45deg);
+    }
+    &--opened::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -4px;
+      width: 28px;
+      height: 2px;
+      background-color: @page-burger-color;
+      transform: rotate(-45deg);
+    }
+  }
+
+  .page-header__toggle--nojs {
+    display: none;
+  }
+}
+
 @media @tablet-widths {
+  .page-header {
+    position: relative;
+    border-bottom: none;
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 87px;
+      left: 0;
+      width: 100%;
+      height: 180px;
+      background-color: @page-footer-color;
+      border-top: 1px solid @page-border-color;
+    }
+    &--paint::before {
+      background-color: @top-bg-color;
+    }
+  }
+
   .page-header__logo {
     display: none;
+  }
+
+  .page-header__wrapper {
+    width: 768px;
+  }
+
+  .page-header__toggle {
+    display: none;
+  }
+}
+
+@media @desktop-widths {
+  .page-header__wrapper {
+    width: 1150px;
   }
 }

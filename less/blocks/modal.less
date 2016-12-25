@@ -1,7 +1,7 @@
 .modal {
   display: none;
   position: fixed;
-  z-index: 2;
+  z-index: 111;
   top: 50%;
   left: 50%;
   margin-left: -160px;
@@ -11,6 +11,9 @@
   border: 1px solid @page-modal-color;
   box-shadow: 0 5px 10px @page-modal-color;
   background-color: @page-white-color;
+  &--show {
+    display: block;
+  }
 }
 
 .modal__form {
@@ -50,6 +53,13 @@
   font-weight: bold;
   font-size: 17px;
   line-height: 16px;
+  cursor: pointer;
+  &:hover {
+    border-color: @page-modal-color;
+  }
+  &:active {
+    border-color: @page-form-color;
+  }
 }
 
 .modal__submit {
@@ -64,6 +74,7 @@
   font-weight: bold;
   line-height: 16px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 @media @tablet-widths {

@@ -1,5 +1,16 @@
 .features {
+  position: relative;
   width: 100%;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: @page-white-color url("../img/bg-zigzag-line.svg") repeat-x;
+    background-size: 80% 100%;
+  }
 }
 
 .features__wrapper {
@@ -10,6 +21,8 @@
 
 .features__title {
   .title();
+  margin-top: 8px;
+  margin-bottom: 6px;
 }
 
 .features__items {
@@ -19,22 +32,60 @@
 }
 
 .features__item {
+  position: relative;
   display: inline-block;
-  padding-top: 87px;
+  padding-top: 82px;
   font-size: 17px;
+  line-height: 1.15em;
   font-weight: bold;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    fill: @page-light-color;
+  }
+  &--flower::before {
+    content: url("../img/icon-feature-1.svg");
+    top: 27px;
+    left: 9px;
+  }
+  &--money::before {
+    content: url("../img/icon-feature-3.svg");
+    top: 28px;
+    left: 1px;
+  }
+  &--heart::before {
+    content: url("../img/icon-feature-5.svg");
+    top: 33px;
+    left: 8px;
+  }
+  &--ball::before {
+    content: url("../img/icon-feature-2.svg");
+    top: 29px;
+    left: 4px;
+  }
+  &--rocket::before {
+    content: url("../img/icon-feature-4.svg");
+    top: 31px;
+    left: -4px;
+  }
+  &--gift::before {
+    content: url("../img/icon-feature-6.svg");
+    top: 28px;
+    left: 5px;
+  }
 }
 
 @media @tablet-widths {
   .features__wrapper {
     width: 768px;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 80px;
+    padding: 61px 50px 48px 50px;
   }
 
   .features__title {
     .title-tablet();
+    margin-bottom: 21px;
   }
 
   .features__items {
@@ -48,6 +99,8 @@
   .features__item {
     font-size: 20px;
     padding-right: 36px;
+    padding-top: 80px;
+    padding-bottom: 30px;
   }
 }
 
@@ -56,14 +109,10 @@
     width: 1150px;
     padding-left: 225px;
     padding-right: 225px;
+    padding-bottom: 54px;
   }
 
   .features__title {
     .title-desktop();
-    margin-bottom: 0;
-  }
-
-  .features__item {
-    padding-top: 105px;
   }
 }

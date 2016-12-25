@@ -5,13 +5,29 @@
 .made__wrapper {
   width: 320px;
   margin: 0 auto;
-  padding: 0 30px 60px 30px;
+  padding: 1px 30px 60px 30px;
+}
+
+.made__shadow {
+  &:hover {
+    box-shadow: 0 5px 5px @page-border-color;
+  }
+  &:active {
+    box-shadow: 0 3px 4px @page-border-color;
+  }
 }
 
 .made__header {
-  padding: 23px 30px 23px 90px;
+  position: relative;
+  padding: 24px 30px 23px 90px;
   border: 1px solid @page-border-color;
   border-bottom: none;
+  &::before {
+    content: url("../img/icon-video.svg");
+    position: absolute;
+    top: 30px;
+    left: 33px;
+  }
 }
 
 .made__title {
@@ -21,27 +37,47 @@
 }
 
 .made__info {
-  padding: 30px;
+  padding: 26px 32px 30px 34px;
   font-size: 13px;
   color: @page-gray-color;
   border: 1px solid @page-border-color;
   border-top: none;
   & p {
     margin-top: 0;
-    margin-bottom: 25px;
+    margin-bottom: 26px;
   }
 }
 
 .made__video {
-  display: block;
+  position: relative;
+  font-size: 0;
+  line-height: 0;
+  cursor: pointer;
+  &::before {
+    content: url("../img/icon-play.svg");
+    position: absolute;
+    top: 40px;
+    left: 80px;
+    z-index: 3;
+  }
+  &:hover::before {
+    transform: scale(1.2);
+  }
+  &:active::before {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
 }
 
 @media @tablet-widths {
   .made__wrapper {
+    width: 768px;
+    padding: 0 50px 65px 50px;
+  }
+
+  .made__shadow {
     display: flex;
     flex-direction: column;
-    width: 768px;
-    padding: 0 50px 60px 50px;
   }
 
   .made__title {
@@ -52,30 +88,49 @@
     order: 1;
     padding-top: 37px;
     padding-left: 107px;
+    &::before {
+      top: 32px;
+      left: 44px;
+    }
   }
 
   .made__info {
     order: 1;
     font-size: 15px;
     line-height: 30px;
-    padding: 10px 42px 48px 42px;
+    padding: 10px 40px 46px 42px;
     & p {
       margin-bottom: 35px;
+    }
+  }
+
+  .made__video {
+    &::before {
+      top: 196px;
+      left: 284px;
     }
   }
 }
 
 @media @desktop-widths {
   .made__wrapper {
-    position: relative;
     width: 1150px;
+    padding-bottom: 106px;
+  }
+
+  .made__shadow {
+    position: relative;
     align-items: flex-end;
   }
 
   .made__video {
     position: absolute;
     top: 0;
-    left: 50px;
+    left: 0;
+    &::before {
+      top: 189px;
+      left: 300px;
+    }
   }
 
   .made__header {
@@ -83,6 +138,11 @@
     padding-left: 78px;
     padding-top: 94px;
     padding-right: 57px;
+    &::before {
+      top: 40px;
+      left: 80px;
+    }
+    border-left: none;
   }
 
   .made__info {
@@ -90,5 +150,9 @@
     padding-left: 78px;
     padding-right: 57px;
     padding-bottom: 60px;
+    border-left: none;
+    & p {
+      margin-bottom: 46px;
+    }
   }
 }

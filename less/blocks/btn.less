@@ -2,10 +2,17 @@
   display: block;
   text-transform: uppercase;
   border: 2px solid @page-gray-color;
-  padding: 18px 0;
+  padding: 16px 0 16px 0;
   color: @page-gray-color;
   text-align: center;
   font-weight: bold;
   font-size: 17px;
   line-height: 16px;
+  &:hover {
+    background-color: @page-gray-color;
+    color: @page-white-color;
+  }
+  &:active {
+    color: @text-menu-hover-color;
+  }
 }

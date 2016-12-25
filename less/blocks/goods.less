@@ -1,5 +1,7 @@
 .goods {
+  position: relative;
   width: 100%;
+  background-color: @top-bg-color;
 }
 
 .goods__wrapper {
@@ -8,9 +10,14 @@
 }
 
 .goods__header {
-  background: url("../../img/hero-mobile@1x.jpg") no-repeat 50% 0;
-  padding: 55px 36px 104px 36px;
+  background: @top-bg-color url("../img/hero-mobile@1x.jpg") no-repeat 50% 21%;
+  padding: 52px 36px 104px 36px;
   text-align: center;
+}
+
+@media (min-resolution: 144dpi),
+(min-resolution: 1.5dppx) {
+  background-image: url("../img/hero-mobile@2x.jpg");
 }
 
 .goods__title {
@@ -25,24 +32,99 @@
 }
 
 .goods__item {
+  position: relative;
   &--interior {
     background-color: @page-light-color;
   }
   &--toys {
     background-color: @page-dark-color;
   }
-  & a {
-    color: @page-white-color;
-    display: block;
-    padding: 25px 75% 30px 29px;
+  &--interior:hover {
+    background-color: @goods-interior-hover-color;
+  }
+  &--toys:hover {
+    background-color: @page-icon-hover-color;
   }
   & h2 {
     font-size: 19px;
     margin: 0;
   }
+  &::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 5px;
+  }
+  &--interior:hover::before {
+    display: block;
+    background-color: @goods-interior-hover-color;
+  }
+  &--toys:hover::before {
+    display: block;
+    background-color: @page-icon-hover-color;
+  }
+}
+
+.goods__link {
+  position: relative;
+  color: @page-white-color;
+  display: block;
+  padding: 25px 75% 30px 29px;
+  &:hover {
+    padding-top: 20px;
+    padding-bottom: 35px;
+  }
+  &:active {
+    color: @goods-text-active-color;
+  }
+  &:hover .goods__icon-interior {
+    fill: @page-interior-hover-color;
+    top: 17px;
+  }
+  &:active .goods__icon-interior {
+    fill: @page-interior-active-color;
+    top: 17px;
+  }
+  &:hover .goods__icon-toys {
+    fill: @page-toys-hover-color;
+    top: 15px;
+  }
+  &:active .goods__icon-toys {
+    fill: @page-toys-active-color;
+    top: 15px;
+  }
+}
+
+.goods__icon-interior {
+  position: absolute;
+  top: 22px;
+  right: 36px;
+  fill: @page-interior-color;
+}
+
+.goods__icon-toys {
+  position: absolute;
+  top: 20px;
+  right: 26px;
+  fill: @page-toys-color;
 }
 
 @media @tablet-widths {
+  .goods {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: 0;
+      width: 100%;
+      height: 30px;
+      background: url("../img/bg-zigzag-fill.svg") repeat-x;
+      background-size: 80% 100%;
+    }
+  }
   .goods__wrapper {
     width: 768px;
     padding-left: 50px;
@@ -52,6 +134,12 @@
   .goods__header {
     padding-top: 63px;
     padding-bottom: 343px;
+    background: url("../img/hero-desktop@1x.jpg") no-repeat 50% 32%;
+  }
+
+  @media (min-resolution: 144dpi),
+  (min-resolution: 1.5dppx) {
+    background-image: url("../img/hero-desktop@2x.jpg");
   }
 
   .goods__title {
@@ -60,9 +148,6 @@
 
   .goods__items {
     flex-direction: row;
-    & a {
-      padding-left: 36px;
-    }
   }
 
   .goods__item {
@@ -70,6 +155,21 @@
     font-size: 20px;
     font-weight: 700;
     line-height: 30px;
+  }
+
+  .goods__link {
+    padding-left: 36px;
+    padding-top: 29px;
+  }
+
+  .goods__icon-interior {
+    top: 30px;
+    right: 36px;
+  }
+
+  .goods__icon-toys {
+    top: 32px;
+    right: 32px;
   }
 }
 
@@ -79,11 +179,18 @@
   }
 
   .goods__header {
+    padding-top: 46px;
     padding-left: 218px;
     padding-right: 218px;
+    padding-bottom: 324px;
+    background-position: 50% 35%;
   }
 
   .goods__title {
     .title-desktop();
+  }
+
+  .goods__icon-toys {
+    right: 34px;
   }
 }
