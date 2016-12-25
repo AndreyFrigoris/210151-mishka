@@ -25,6 +25,9 @@
     height: 1px;
     background-color: @page-form-color;
   }
+  &--color {
+    margin-bottom: 22px;
+  }
   &--id {
     margin-bottom: 30px;
   }
@@ -81,7 +84,7 @@
 .order-form__color-wrapper {
   width: 320px;
   margin: 0 auto;
-  padding-left: 30px;
+  padding-left: 31px;
   padding-right: 30px;
   padding-top: 20px;
   display: flex;
@@ -146,8 +149,8 @@
 .order-form__input {
   border: none;
   border-bottom: 2px solid @page-black-color;
-  padding: 16px 0;
-  margin-bottom: 22px;
+  padding: 16px 0 15px 0;
+  margin-bottom: 23px;
   &:hover {
     border-color: @page-form-color;
   }
@@ -169,7 +172,7 @@
   margin: 0 auto;
   padding-left: 30px;
   padding-right: 30px;
-  padding-top: 10px;
+  padding-top: 9px;
   display: flex;
   flex-direction: column;
 }
@@ -185,7 +188,7 @@
   border: none;
   border-bottom: 2px solid @page-black-color;
   padding-bottom: 17px;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   &:hover {
     border-color: @page-form-color;
   }
@@ -207,15 +210,15 @@
   margin: 0 auto;
   padding-left: 30px;
   padding-right: 30px;
-  padding-top: 10px;
+  padding-top: 11px;
   display: flex;
   flex-direction: column;
 }
 
 .order-form__icon-mail {
   position: absolute;
-  top: 42px;
-  right: 35px;
+  top: 44px;
+  right: 33px;
   fill: @page-form-icon;
 }
 
@@ -296,16 +299,18 @@
     &::after {
       display: none;
     }
-    &--color,
+    &--color {
+      top: 63px;
+    }
     &--phone {
-      top: 70px;
+      top: 68px;
     }
     &--id,
     &--other {
       top: 67px;
     }
     &--email {
-      top: 10px;
+      top: 14px;
     }
   }
 
@@ -341,7 +346,7 @@
   .order-form__color-wrapper {
     position: relative;
     width: 768px;
-    padding: 50px 50px 30px 216px;
+    padding: 43px 50px 28px 218px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -350,9 +355,10 @@
   .order-form__checkbox-label {
     position: relative;
     width: 48%;
+    flex-grow: 1;
     font-size: 19px;
     padding-top: 18px;
-    padding-bottom: 39px;
+    padding-bottom: 40px;
     padding-left: 80px;
     &::before {
       top: 2px;
@@ -373,11 +379,11 @@
     width: 768px;
     padding-left: 216px;
     padding-right: 50px;
-    padding-top: 50px;
+    padding-top: 48px;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: baseline;
-    margin-bottom: 20px;
+    margin-bottom: 28px;
   }
 
   .order-form__input {
@@ -385,7 +391,7 @@
     font-size: 19px;
     flex-grow: 1;
     padding-left: 18px;
-    margin-bottom: 25px;
+    margin-bottom: 22px;
   }
 
   .order-form__input-label {
@@ -407,12 +413,12 @@
   }
 
   .order-form__phone-wrapper {
-    padding-top: 68px;
-    padding-bottom: 8px;
+    padding-top: 60px;
+    padding-bottom: 7px;
   }
 
   .order-form__icon-phone {
-    top: 67px;
+    top: 60px;
     right: 75px;
   }
 
@@ -421,8 +427,8 @@
   }
 
   .order-form__icon-mail {
-    top: 7px;
-    right: 70px;
+    top: 8px;
+    right: 72px;
   }
 
   .order-form__phone-number,
@@ -430,33 +436,36 @@
     background-color: @page-footer-color;
     padding-left: 17px;
     font-size: 19px;
+
   }
 
   .order-form__other-wrapper {
     position: relative;
     width: 768px;
-    padding: 50px 50px 50px 216px;
+    padding: 50px 50px 53px 216px;
   }
 
   .order-form__wish {
     font-size: 19px;
+    line-height: 18px;
   }
 
   .order-form__other-notification {
     font-size: 17px;
     line-height: 30px;
     text-align: right;
+    margin-top: 8px;
   }
 
   .order-form__submit-wrapper {
     width: 768px;
     flex-direction: row-reverse;
     padding: 0 50px 50px 50px;
-    margin: 0;
+    margin: 0 auto;
   }
 
   .order-form__submit {
-    width: 226px;
+    width: 230px;
     margin: 0;
   }
 }
@@ -464,54 +473,70 @@
 @media @desktop-widths {
   .order-form__title {
     left: 112px;
+    &--color {
+      left: 109px;
+    }
+    &--email {
+      left: 110px;
+      top: 16px;
+    }
   }
 
   .order-form__type-wrapper {
     width: 1150px;
+    padding-left: 225px;
   }
 
   .order-form__color-wrapper {
     width: 1150px;
-    padding-right: 140px;
+    padding-right: 175px;
+    padding-left: 225px;
+    justify-content: flex-start;
   }
 
   .order-form__checkbox-label {
     width: 30%;
+    flex-grow: 0;
   }
 
   .order-form__id-wrapper {
     width: 1150px;
     padding-right: 225px;
+    padding-left: 225px;
   }
 
   .order-form__phone-wrapper {
     width: 1150px;
     padding-right: 225px;
+    padding-left: 225px;
   }
 
   .order-form__icon-phone {
-    top: 67px;
-    right: 232px;
+    top: 61px;
+    right: 234px;
   }
 
   .order-form__email-wrapper {
     width: 1150px;
     padding-right: 225px;
+    padding-left: 225px;
   }
 
   .order-form__icon-mail {
     top: 8px;
-    right: 228px;
+    right: 230px;
   }
 
   .order-form__other-wrapper {
     width: 1150px;
     padding-right: 225px;
+    padding-left: 225px;
+    padding-bottom: 50px;
   }
 
   .order-form__submit-wrapper {
     width: 1150px;
     padding-right: 225px;
-    padding-left: 216px;
+    padding-left: 225px;
   }
 }
