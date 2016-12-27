@@ -51,7 +51,7 @@ gulp.task("symbols", function() {
 
 gulp.task("serve", function() {
   server.init({
-    server: "build",
+    server: ".",
     notify: false,
     open: true,
     cors: true,
