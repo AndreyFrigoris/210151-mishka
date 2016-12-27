@@ -29,22 +29,20 @@
 }
 
 @media @tablet-widths {
-  .order {
+  .order__header {
+    position: relative;
+    padding: 32px 0 85px 0;
+    border: none;
     &::after {
       content: "";
       position: absolute;
-      top: 150px;
+      bottom: -10px;
       left: 0;
       width: 100%;
-      height: 30px;
+      height: 24px;
       background: url("../img/bg-zigzag-fill.svg") repeat-x;
-      background-size: 100%;
+      background-size: auto 24px;
     }
-  }
-
-  .order__header {
-    padding: 32px 0 85px 0;
-    border: none;
   }
 
   .order__title {
@@ -60,22 +58,20 @@
 }
 
 @media @desktop-widths {
-  .order {
-    &::after {
-      top: 150px;
-    }
-  }
-
   .order__title {
     .title-desktop();
   }
 
   .order__header {
-    padding: 23px 0 94px 0;
+    padding: 23px 0 104px 0;
+    &::after {
+      bottom: -10px;
+      background-size: auto 34px;
+    }
   }
 
   .order__subtitle {
     width: 1150px;
-    padding: 130px 224px 55px 224px;
+    padding: 120px 224px 55px 224px;
   }
 }
