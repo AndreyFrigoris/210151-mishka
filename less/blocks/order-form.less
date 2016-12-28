@@ -72,12 +72,18 @@
   &:active::before {
     border-color: @text-menu-active-color;
   }
+  &:active::after {
+    display: block;
+  }
 }
 
 .order-form__radio {
   display: none;
   &:checked + .order-form__radio-label::after {
     display: block;
+  }
+  &:checked + .order-form__radio-label:active::after {
+    display: none;
   }
 }
 
@@ -127,12 +133,18 @@
   &:active::before {
     border-color: @text-menu-active-color;
   }
+  &:active::after {
+    display: block;
+  }
 }
 
 .order-form__checkbox {
   display: none;
   &:checked + .order-form__checkbox-label::after {
     display: block;
+  }
+  &:checked + .order-form__checkbox-label:active::after {
+    display: none;
   }
 }
 
