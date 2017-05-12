@@ -4,12 +4,12 @@
   &::before {
     content: "";
     position: absolute;
-    top: -3px;
+    top: 5px;
     left: 0;
     width: 100%;
     height: 23px;
     background: @page-white-color url("../img/bg-zigzag-line.svg") repeat-x;
-    background-size: 80% 100%;
+    background-size: auto 7px;
   }
 }
 
@@ -95,6 +95,12 @@
 }
 
 @media @tablet-widths {
+  .contacts {
+    &::before {
+      background-size: auto 17px;
+    }
+  }
+
   .contacts__wrapper {
     position: relative;
     width: 768px;
@@ -154,6 +160,10 @@
 @media @desktop-widths {
   .contacts {
     position: relative;
+    &::before {
+      top: 10px;
+      background-size: auto 23px;
+    }
   }
 
   .contacts__wrapper {
